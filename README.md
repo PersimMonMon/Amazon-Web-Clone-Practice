@@ -7,3 +7,4 @@ Main idea of JavaScript
             -example: for amazon we created an array to store objects that contain info about the product 
         
         -.toFixed allows us to set how many decimals we want 
+        -order of scripts going into html matters!
