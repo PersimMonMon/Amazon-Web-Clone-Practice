@@ -18,3 +18,17 @@ How do we know which product to add?
         -use .dataset to get all attributes starting with data- 
 
 Note: includes() only work on arrays or strings
+
+Lesson 13: 
+    1. Started final Amazon project
+    2. Set up and learned Git
+    3. Learned the main idea of JavaScript
+    4. Created list of products
+    5. Made the "Add to Cart" button interactive 
+
+        Summary: 
+            Learned to generate HTML with backticks. Use a template to recreate more items to display. Template contains a bunch of div to store images, name, count, ratings, etc. We use that template to generate more HTML by making an array and changing item info with backticks and ${}. Stored the objects into the array, each object contains important information stated above. 
+
+            Add function so that when user clicks on Add to cart it updates the cart count. Done by doing .forEach() on every object and added a eventListener to all buttons with querySelectorAll. When user clicks on the button it adds an object to cart variable list in separate script file. To update quantity when user clicks button twice or more it does not make a duplicate, but rather increases quantity of that item User wants to buy. This is done by creating a variable which checks if that object is presenting by comapring (===). Use false and true statements of that variable to check whether to increase quantity or push new object into cart list. 
+
+            Made the cart count interactive. It calculates total items in cart and updates that to the user. This is done by making a variable to record and adding in new items user puts in, should be within the array loop when it checks once a user clicks on add to cart button. Create class and target it with querySelector and change .innerHTML to total cart count. 
