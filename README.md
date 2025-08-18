@@ -25,6 +25,7 @@ Lesson 13:
     3. Learned the main idea of JavaScript
     4. Created list of products
     5. Made the "Add to Cart" button interactive 
+    6. Made cart quantity interactive
 
         Summary: 
             Learned to generate HTML with backticks. Use a template to recreate more items to display. Template contains a bunch of div to store images, name, count, ratings, etc. We use that template to generate more HTML by making an array and changing item info with backticks and ${}. Stored the objects into the array, each object contains important information stated above. 
