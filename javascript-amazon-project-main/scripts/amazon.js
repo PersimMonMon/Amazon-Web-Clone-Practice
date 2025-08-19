@@ -42,7 +42,7 @@ products.forEach((product) => {
 
           <div class="product-spacer"></div>
 
-          <div class="added-to-cart">
+          <div class="added-to-cart js-add-confirmation-${product.id}">
             <img src="images/icons/checkmark.png">
             Added
           </div>
@@ -60,11 +60,17 @@ document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
 document.querySelectorAll('.js-add-button').forEach((button) => {
   button.addEventListener('click', () => {
-    const productId = button.dataset.productId;
+    const {productId} = button.dataset;
     let matchingItem;
     let cartQuantity = 0;
     const quantitySelector = document.querySelector(`.js-quantity-selector-${productId}`);
-    console.log(quantitySelector.value);
+    const addConfirmation = document.querySelector(`.js-add-confirmation-${productId}`)
+    addConfirmation.classList.add('display-confirmation');
+    setTimeout(() => {
+      clearTimeout();
+      addConfirmation.classList.remove('display-confirmation');
+    }, 2000)
+    
 
 
     //loop cart see if matching item, if so update variable
