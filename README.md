@@ -33,3 +33,23 @@ Lesson 13:
             Add function so that when user clicks on Add to cart it updates the cart count. Done by doing .forEach() on every object and added a eventListener to all buttons with querySelectorAll. When user clicks on the button it adds an object to cart variable list in separate script file. To update quantity when user clicks button twice or more it does not make a duplicate, but rather increases quantity of that item User wants to buy. This is done by creating a variable which checks if that object is presenting by comapring (===). Use false and true statements of that variable to check whether to increase quantity or push new object into cart list. 
 
             Made the cart count interactive. It calculates total items in cart and updates that to the user. This is done by making a variable to record and adding in new items user puts in, should be within the array loop when it checks once a user clicks on add to cart button. Create class and target it with querySelector and change .innerHTML to total cart count. 
+
+Lesson 14: 
+
+        Why use Modules
+            -flaw of having multiple scripts in HTML is that you can't reuse another variable 
+            -causes naming errors 
+        
+        When creating a Module: 
+            1. Create a file 
+            2. Don't load the file with <script>
+            3. Opens with live server only 
+
+            Any variables inside the file, will be contained inside the file 
+        
+            Get a Variable out of a File 
+                1. Add type="module" attribute
+                2. Export 
+                3. Import (always at top of file)
+
+            Note: you don't need to do type="module" if mjs file aka you have Node
