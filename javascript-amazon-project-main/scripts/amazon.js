@@ -1,4 +1,4 @@
-import {cart} from '../data/cart.js';
+import {cart, addToCart} from '../data/cart.js';
 import {products} from '../data/products.js';
 
 // make code to generate HTML 
@@ -59,27 +59,6 @@ products.forEach((product) => {
 document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
 //improve buttons to be interactive, when person presses on button, console.log('Added")
-
-function addToCart(productId, quantitySelector) {
-  let matchingItem;
-  //loop cart see if matching item, if so update variable
-  cart.forEach((cartItem) => {
-    if (cartItem.name === productId) {
-      matchingItem = cartItem;
-    }
-  });
-
-  // check if matching variable exists
-  if (matchingItem) {
-    matchingItem.quantity += Number(quantitySelector.value);
-  } else {
-    cart.push({
-    name: productId,
-    quantity: Number(quantitySelector.value)
-    }
-  )
-  } 
-}
 
 function totalCartQuantity() {
   let cartQuantity = 0;
