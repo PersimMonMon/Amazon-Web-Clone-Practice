@@ -1,4 +1,5 @@
 import {cart} from '../data/cart.js';
+import {products} from '../data/products.js';
 
 // make code to generate HTML 
 let productsHTML = '';
@@ -59,11 +60,41 @@ document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
 //improve buttons to be interactive, when person presses on button, console.log('Added")
 
+function addToCart(productId, quantitySelector) {
+  let matchingItem;
+  //loop cart see if matching item, if so update variable
+  cart.forEach((cartItem) => {
+    if (cartItem.name === productId) {
+      matchingItem = cartItem;
+    }
+  });
+
+  // check if matching variable exists
+  if (matchingItem) {
+    matchingItem.quantity += Number(quantitySelector.value);
+  } else {
+    cart.push({
+    name: productId,
+    quantity: Number(quantitySelector.value)
+    }
+  )
+  } 
+}
+
+function totalCartQuantity() {
+  let cartQuantity = 0;
+  // loop cart, grab all quantity and add them up
+  cart.forEach((cartItem) => {
+    cartQuantity += cartItem.quantity;
+  });
+  document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+}
+
 document.querySelectorAll('.js-add-button').forEach((button) => {
   button.addEventListener('click', () => {
     const {productId} = button.dataset;
-    let matchingItem;
-    let cartQuantity = 0;
+    
+
     const quantitySelector = document.querySelector(`.js-quantity-selector-${productId}`);
     const addConfirmation = document.querySelector(`.js-add-confirmation-${productId}`)
     addConfirmation.classList.add('display-confirmation');
@@ -71,31 +102,9 @@ document.querySelectorAll('.js-add-button').forEach((button) => {
       clearTimeout();
       addConfirmation.classList.remove('display-confirmation');
     }, 2000)
-    
 
-
-    //loop cart see if matching item, if so update variable
-    cart.forEach((item) => {
-      if (item.name === productId) {
-        matchingItem = item;
-      }
-    });
-
-    // check if matching variable exists
-    if (matchingItem) {
-      matchingItem.quantity += Number(quantitySelector.value);
-    } else {
-      cart.push({
-      name: productId,
-      quantity: Number(quantitySelector.value)
-      }
-    )
-    } 
-    // loop cart, grab all quantity and add them up
-    cart.forEach((item) => {
-      cartQuantity += item.quantity;
-    });
-    document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+    addToCart(productId, quantitySelector);
+    totalCartQuantity();
   });
 });
 

@@ -39,6 +39,7 @@ Lesson 14:
         Why use Modules
             -flaw of having multiple scripts in HTML is that you can't reuse another variable 
             -causes naming errors 
+            -order of script tags don't matter
         
         When creating a Module: 
             1. Create a file 
