@@ -54,3 +54,6 @@ Lesson 14:
                 3. Import (always at top of file)
 
             Note: you don't need to do type="module" if mjs file aka you have Node
+
+            Normalizing the data
+                Don't add repetitive objects if you can get the productId and get the rest of its info from the main source, no need to push same info if it lies somewhere else entirely. 
