@@ -57,5 +57,8 @@ Lesson 14:
 
             Normalizing the data
                 Don't add repetitive objects if you can get the productId and get the rest of its info from the main source, no need to push same info if it lies somewhere else entirely. 
+            
+            **Every method we get with the DOM has a .remove method**
+                Delete HTML element from the page 
 
             
