@@ -35,6 +35,11 @@ Lesson 13:
             Made the cart count interactive. It calculates total items in cart and updates that to the user. This is done by making a variable to record and adding in new items user puts in, should be within the array loop when it checks once a user clicks on add to cart button. Create class and target it with querySelector and change .innerHTML to total cart count. 
 
 Lesson 14: 
+    1. Modules = better way to organize code
+    2. Created the checkout page
+    3. HTML link elements and radio selectors
+    4. Made the delete link interactive
+    5. Saved the cart in localStorage 
 
         Why use Modules
             -flaw of having multiple scripts in HTML is that you can't reuse another variable 
