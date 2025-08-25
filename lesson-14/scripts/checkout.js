@@ -126,5 +126,8 @@ document.querySelectorAll('.js-update-quantity-link')
     updateLink.addEventListener('click', () => {
       const productId = updateLink.dataset.productId
       console.log(productId);
+
+      //add class to container on click update
+      document.querySelector(`.js-cart-item-container-${productId}`).classList.add("is-editing-quantity")
     })
   })
