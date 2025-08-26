@@ -35,7 +35,7 @@ cart.forEach((cartItem) => {
           </div>
           <div class="product-quantity">
             <span>
-              Quantity: <span class="quantity-label">${cartItem.quantity}</span>
+              Quantity: <span class="quantity-label js-quantity-amount">${cartItem.quantity}</span>
             </span>
 
             <span class="js-update-quantity-link update-quantity-link link-primary" data-product-id="${matchingProduct.id}">
@@ -152,6 +152,9 @@ document.querySelectorAll('.js-save-link')
     updateQuantity(productId, quantityValue);
     console.log(cart);
     
+    //display quantity on checkout.html
+    updateCartQuantity();
+    document.querySelector('.js-quantity-amount').innerHTML = quantityValue;
     });
   });
 
