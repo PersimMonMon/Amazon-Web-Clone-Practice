@@ -1,4 +1,4 @@
-import {cart, removeFromCart, calculateCartQuantity} from '../data/cart.js';
+import {cart, removeFromCart, calculateCartQuantity, updateQuantity} from '../data/cart.js';
 import {products} from '../data/products.js';
 import {formatCurrency} from './utils/money.js';
 
@@ -148,7 +148,10 @@ document.querySelectorAll('.js-save-link')
     // when clicking "Save", use DOM to get quantity of input value (remmeber to convert into a number)
     const quantityValue = Number(document.querySelector(`.js-quantity-amount-${productId}`).value)
 
-    console.log(quantityValue);
+    // update new quantity to cart 
+    updateQuantity(productId, quantityValue);
+    console.log(cart);
+    
     });
   });
 
