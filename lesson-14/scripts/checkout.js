@@ -37,11 +37,14 @@ cart.forEach((cartItem) => {
             <span>
               Quantity: <span class="quantity-label">${cartItem.quantity}</span>
             </span>
-            <span class="js-update-quantity-link link-primary" data-product-id=${matchingProduct.id}>
+            <span class="js-update-quantity-link update-quantity-link link-primary" data-product-id="${matchingProduct.id}">
               Update
             </span>
+
             <input class="quantity-input">
-            <span class="save-quantity-link link-primary">Save</span>
+
+            <span class="save-quantity-link js-save-link link-primary" data-product-id="${matchingProduct.id}">Save</span>
+
             <span class="delete-quantity-link link-primary js-delete-link" data-product-id="${matchingProduct.id}">
               Delete
             </span>
@@ -129,5 +132,21 @@ document.querySelectorAll('.js-update-quantity-link')
 
       //add class to container on click update
       document.querySelector(`.js-cart-item-container-${productId}`).classList.add("is-editing-quantity")
+
     })
   })
+
+// add evenlistener to all save links. when clicking "Save" remove the class "is-editing-quantity"
+document.querySelectorAll('.js-save-link')
+  .forEach((saveLink) => {
+    const productId = saveLink.dataset.productId
+
+    saveLink.addEventListener('click', () => {
+      document.querySelector(`.js-cart-item-container-${productId}`).classList.remove('is-editing-quantity')
+    })
+    // when clicking "Save", use DOM to get quantity of input value (remmeber to convert into a number)
+    
+
+  })
+
+
