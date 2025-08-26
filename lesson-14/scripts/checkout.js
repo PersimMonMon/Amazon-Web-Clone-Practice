@@ -42,7 +42,7 @@ cart.forEach((cartItem) => {
               Update
             </span>
 
-            <input class="quantity-input js-quantity-amount-${matchingProduct.id}">
+            <input type="number" min="1" max="1000" class="quantity-input js-quantity-amount-${matchingProduct.id}" data-product-id="${matchingProduct.id}">
 
             <span class="save-quantity-link js-save-link link-primary" data-product-id="${matchingProduct.id}">Save</span>
 
@@ -137,25 +137,47 @@ document.querySelectorAll('.js-update-quantity-link')
     });
   });
 
+function clickSave(productId) {
+
+  // remove class that hides quantity and update 
+  document.querySelector(`.js-cart-item-container-${productId}`).classList.remove('is-editing-quantity')
+
+  // when clicking "Save", use DOM to get quantity of input value (remmeber to convert into a number)
+  const quantityValue = Number(document.querySelector(`.js-quantity-amount-${productId}`).value)
+
+  // update new quantity to cart 
+  updateQuantity(productId, quantityValue);
+  console.log(cart);
+  
+  //make sure quantity >= 0
+  if (quantityValue < 0 || quantityValue > 1000) {
+    quantityValue = 0;
+  };
+
+  //display quantity on checkout.html
+  updateCartQuantity();
+  document.querySelector('.js-quantity-amount').innerHTML = quantityValue;
+  };
+
 // add evenlistener to all save links. when clicking "Save" remove the class "is-editing-quantity"
 document.querySelectorAll('.js-save-link')
   .forEach((saveLink) => {
     const productId = saveLink.dataset.productId
 
     saveLink.addEventListener('click', () => {
-      document.querySelector(`.js-cart-item-container-${productId}`).classList.remove('is-editing-quantity')
-
-    // when clicking "Save", use DOM to get quantity of input value (remmeber to convert into a number)
-    const quantityValue = Number(document.querySelector(`.js-quantity-amount-${productId}`).value)
-
-    // update new quantity to cart 
-    updateQuantity(productId, quantityValue);
-    console.log(cart);
-    
-    //display quantity on checkout.html
-    updateCartQuantity();
-    document.querySelector('.js-quantity-amount').innerHTML = quantityValue;
+      clickSave(productId);
     });
+
+    document.querySelectorAll(`.js-quantity-amount-${productId}`)
+    .forEach((inputbox) => {
+      inputbox.addEventListener('keyup', (event) => {
+        if (event.key === 'Enter') {
+          const productId = inputbox.dataset.productId
+          clickSave(productId);
+        };
+      });   
+    });
+
   });
 
 
