@@ -66,4 +66,27 @@ Lesson 14:
             **Every method we get with the DOM has a .remove method**
                 Delete HTML element from the page 
 
+Lesson 15: External Libaries, MVC, Finish Checkout Page
+
+        External library: code that is outside of our project
+
+        Minification: compress code so that code can load faster (done on external libraries)
+
+        Best Practice:
+            When we need something complicated
+                -try to find an external library first before writing the code ourselves
+        
+        Special version of library: ESM Version 
+            ESM = EcmaScript Module (EcmaScript = JS)
+            -a version that works with JS Modules 
+        
+        Default Export
+        -another way of exporting 
+        -we can use it when we only want to export 1 thing
+
+        Main Idea of JS: 
+        1. Save the data
+        2. Generate the HTML
+        3. Make it interactive 
+
             
