@@ -67,6 +67,13 @@ Lesson 14:
                 Delete HTML element from the page 
 
 Lesson 15: External Libaries, MVC, Finish Checkout Page
+    1. External libaries = code outside of our project
+    2. DAYJS external library
+    3. External libraries + JavaScript Modules, default export
+    4. Created the delivery section 
+    5. MVC = Model - View - Controller
+    6. Created the payment section 
+
 
         External library: code that is outside of our project
 
@@ -88,5 +95,16 @@ Lesson 15: External Libaries, MVC, Finish Checkout Page
         1. Save the data
         2. Generate the HTML
         3. Make it interactive 
+
+        MVC = Model - View - Controller
+        1. Update the data 
+        2. Regenerate all the HTML 
+
+        MVC has three parts 
+            1. Model = saves and manages the data (our cart.js)
+            2. View = takes the data and displays it on the page 
+            3. Controller = runs some code when we interact with the page 
+
+        
 
             
