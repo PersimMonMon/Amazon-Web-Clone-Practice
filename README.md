@@ -118,5 +118,12 @@ Lesson 16
             -Basic test cases (check if code working)
             -Edge cases (tricky values)
         
+        Group of related tests = test suite 
+
+        Testing Framework = external library that helps us write tests easier
+            Things it does automaticlaly:
+                1. Create test suite
+                2. Create tests
+                3. Compare values and display result
 
             
