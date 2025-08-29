@@ -105,6 +105,18 @@ Lesson 15: External Libaries, MVC, Finish Checkout Page
             2. View = takes the data and displays it on the page 
             3. Controller = runs some code when we interact with the page 
 
+Lesson 16
+    1. 
+        Disadvantages of Manual Testing 
+            1. Hard to test every situation 
+            2. Hard to re-test (after we change code)
+
+        Automated testing = using code to test code
+        -Try to test something different in each test case
+
+        2 Types of Test Cases
+            -Basic test cases (check if code working)
+            -Edge cases (tricky values)
         
 
             
