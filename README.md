@@ -125,5 +125,7 @@ Lesson 16
                 1. Create test suite
                 2. Create tests
                 3. Compare values and display result
+        
+        -Spec is another name for test
 
             
