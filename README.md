@@ -127,5 +127,10 @@ Lesson 16
                 3. Compare values and display result
         
         -Spec is another name for test
+        -Best Practice
+            test each condition of an if-statement (test coverage: how much of the code is being tested)
 
+        Flaky Test = test that sometimes passes and sometimes fails 
+
+        Mocks = lets us replace a method with a fake version 
             
