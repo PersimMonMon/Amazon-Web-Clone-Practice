@@ -106,7 +106,12 @@ Lesson 15: External Libaries, MVC, Finish Checkout Page
             3. Controller = runs some code when we interact with the page 
 
 Lesson 16
-    1. 
+    1. Mangual and automated tests
+    2. Test cases and test suites
+    3. Testing Framework = helps us write tests easier
+    4. Mock and spy on methods
+    5. Test web pages using integration tests
+    6. Hooks (beforeEach())
         Disadvantages of Manual Testing 
             1. Hard to test every situation 
             2. Hard to re-test (after we change code)
@@ -136,4 +141,8 @@ Lesson 16
             Mock only lasts for 1 test
 
         Integration Test = tests many units/pieces of code working together 
+
+        Hooks = lets us run some code for each test 
+
+
             
