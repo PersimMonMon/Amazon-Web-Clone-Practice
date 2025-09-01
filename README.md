@@ -133,4 +133,7 @@ Lesson 16
         Flaky Test = test that sometimes passes and sometimes fails 
 
         Mocks = lets us replace a method with a fake version 
+            Mock only lasts for 1 test
+
+        Integration Test = tests many units/pieces of code working together 
             
