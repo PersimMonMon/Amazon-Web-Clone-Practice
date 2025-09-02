@@ -160,8 +160,11 @@ Lesson 17
         Class = object generator
             -Classes have better features for OOP 
                 -Constructor (lets us run setup code)
+            -contains private property if you put a hash in front of variable (can only be access inside a class )
         
         Instance - each object we generate from a class is called an instance 
+
+        A field is the same term as property 
 
 
             
