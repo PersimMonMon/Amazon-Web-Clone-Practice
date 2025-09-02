@@ -144,5 +144,18 @@ Lesson 16
 
         Hooks = lets us run some code for each test 
 
+Lesson 17 
+
+        Object-Oriented Programming (OOP)
+            another style of programming (another way to write code)
+            -organizing our code into objects 
+        
+        Procedural Programming = set of step-bystep instructions (into functions)
+
+        Function inside an object = method 
+
+        Use PascalCase for things that generate objects 
+            -start every word with a capital
+
 
             
