@@ -157,5 +157,11 @@ Lesson 17
         Use PascalCase for things that generate objects 
             -start every word with a capital
 
+        Class = object generator
+            -Classes have better features for OOP 
+                -Constructor (lets us run setup code)
+        
+        Instance - each object we generate from a class is called an instance 
+
 
             
