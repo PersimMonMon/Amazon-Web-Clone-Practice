@@ -1,3 +1,5 @@
+import formatCurrency from "../scripts/utils/money";
+
 export function getProduct(productId) {
   let matchingProduct;
 
@@ -24,7 +26,52 @@ class Product {
     this.rating = productDetails.rating
     this.priceCents = productDetails.priceCents 
   }
+
+  getPrice() {
+    return `$${formatCurrency(this.priceCents)}`;
+  }
 }
+
+class Clothing extends Product{ 
+  sizeChartLink; 
+
+  constructor(productDetails){
+    // get the constructor of the parent, parameter must be that of constructor from the parent 
+    super(productDetails);
+
+    //set the sizeChartLink to that of new Clothing 
+    this.sizeChartLink = productDetails.sizeChartLink;
+  }
+
+    //generate extra HTML 
+    extraInfoHTML(){
+      return `
+      <a href="${this.sizeChartLink}" target="_blank" >Size chart</a>
+      `;
+    }
+  
+
+}
+const tshirt = new Clothing ({
+  id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
+  image: "images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
+  name: "Adults Plain Cotton T-Shirt - 2 Pack",
+  rating: {
+    stars: 4.5,
+    count: 56
+  },
+  priceCents: 799,
+  keywords: [ 
+    "tshirts",
+    "apparel", 
+    "mens"
+  ],
+  type: "clothing",
+  sizeChartLink: "images/clothing-size-chart.png"
+}
+)
+
+console.log(tshirt);
 
 export const products = [
   {
@@ -686,6 +733,7 @@ export const products = [
     ]
   }
 ].map((productDetails) => {
+
   return new Product(productDetails);
 });
 
